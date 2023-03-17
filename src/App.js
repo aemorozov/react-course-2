@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./components/Header"
-import './css/main.css'
+import Image from "./components/Image"
+import logo from './img/logo.png'
 
 class App extends React.Component {
     helpText = 'Help text'
@@ -13,6 +14,7 @@ class App extends React.Component {
                     onClick={this.inputClick}
                     onMouseEnter={this.mouseOver} />
                 <p>{this.helpText === 'Help text' ? 'yes' : 'no'}</p>
+                <Image image={logo} />
             </>
         )
     }
