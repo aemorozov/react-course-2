@@ -1,5 +1,6 @@
 import React from "react"
-import Header from "./Components/Header"
+import Header from "./components/Header"
+import './css/main.css'
 
 class App extends React.Component {
     helpText = 'Help text'
