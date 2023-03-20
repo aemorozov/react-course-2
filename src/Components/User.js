@@ -12,18 +12,22 @@ class User extends React.Component {
     user = this.props.user
     render() {
         return (
-            <div className="user" >
-                <IoCloseCircleSharp onClick={() => this.props.onDelete(this.user.id)} className="delete-icon" />
-                <IoHammerSharp onClick={() => {
-                    this.setState({
-                        editForm: !this.state.editForm
-                    })
-                }} className="edit-icon" />
-                <h3>Name: {this.user.firstname} {this.user.lastname}</h3>
-                <p>Bio: {this.user.bio}</p>
-                <p style={{ fontWeight: '600' }}>Age: {this.user.age}</p>
-                <b>{this.user.isHappy ? `He is happy` : `He isn't happy`}</b>
-
+            <div className="user">
+                <div className="user-flex">
+                    <img className="avatar" src={this.user.avatar} />
+                    <div className="names">
+                        <h3>Name: {this.user.first_name} {this.user.last_name}</h3>
+                        <p>email: {this.user.email}</p>
+                    </div>
+                    <div>
+                        <IoCloseCircleSharp onClick={() => this.props.onDelete(this.user.id)} className="delete-icon" />
+                        <IoHammerSharp onClick={() => {
+                            this.setState({
+                                editForm: !this.state.editForm
+                            })
+                        }} className="edit-icon" />
+                    </div>
+                </div>
                 {this.state.editForm && <AddUser onAdd={this.props.onEdit} user={this.user} />}
             </div>
         )

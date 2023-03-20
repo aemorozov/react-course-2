@@ -92,6 +92,16 @@ form button:hover {
     transform: scale(1.05);
 }
 
+.user-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.names {
+    min-width: 300px;
+    width: 300px;
+}
+
 .user form {
     margin-top: 20px;
 }
@@ -101,4 +111,8 @@ form button:hover {
 .user form button {
     background-color: #134b57;
     color: #fff;
+}
+
+.avatar {
+    float: left;
 }
