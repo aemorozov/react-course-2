@@ -7,7 +7,7 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            helpText: "Help Text",
+            helpText: "Help text",
             userData: "",
         }
 
