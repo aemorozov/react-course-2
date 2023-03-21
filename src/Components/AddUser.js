@@ -21,7 +21,7 @@ class AddUser extends React.Component {
                     onChange={(event) => { this.setState({ first_name: event.target.value }) }} />
                 <input placeholder="Last name"
                     onChange={(event) => { this.setState({ last_name: event.target.value }) }} />
-                <input placeholder="Photo link"
+                <input placeholder="Photo link 128x128"
                     onChange={(event) => { this.setState({ avatar: event.target.value }) }} />
                 <input placeholder="Email"
                     onChange={(event) => { this.setState({ email: event.target.value }) }}></input>
